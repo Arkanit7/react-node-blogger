@@ -3,11 +3,11 @@ const blogRouter = require("./routes/blog");
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = process.env.PORT || "80"; //80 is web default
+const PORT = process.env.PORT || "3000"; //80 is web default
 const dbURI =
   "mongodb+srv://freeuser:12345@cluster0.jhjbg.mongodb.net/my_node_db?retryWrites=true&w=majority";
 
-async function connectDbAndStartServer(PORT = 5000, dbURI) {
+async function connectDbAndStartServer(PORT = 3000, dbURI) {
   try {
     //connect to mongodb
     await mongoose.connect(dbURI, {
