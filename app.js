@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const HOST = "192.168.31.126"; //192.168.31.126
-const PORT = process.env.PORT || "80"; //80 is web default
+const PORT = process.env.PORT || "5000"; //80 is web default
 const dbURI =
   "mongodb+srv://freeuser:12345@cluster0.jhjbg.mongodb.net/my_node_db?retryWrites=true&w=majority";
 
