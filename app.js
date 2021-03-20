@@ -14,7 +14,6 @@ async function connectDbAndStartServer(PORT = 5000, dbURI) {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log(response);
     console.log("Connected to Mongodb...");
     //start the server
     app.listen(PORT, () => {
