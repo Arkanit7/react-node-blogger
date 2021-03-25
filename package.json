@@ -4,9 +4,9 @@
   "description": "A test http server",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
   "author": "Arkanit",
   "license": "ISC",

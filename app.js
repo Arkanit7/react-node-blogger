@@ -8,25 +8,13 @@ const dbURI =
   process.env.MONGODB_URI ||
   "mongodb+srv://freeuser:12345@cluster0.jhjbg.mongodb.net/my_node_db?retryWrites=true&w=majority";
 
-async function connectDbAndStartServer(PORT = 3000, dbURI) {
-  try {
-    //connect to mongodb
-    await mongoose.connect(dbURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("Connected to Mongodb...");
-    //start the server
-    app.listen(PORT, () => {
-      console.log(`Server is listening on ${PORT}...`);
-    });
-  } catch (error) {
-    console.log("Something is wrong!");
-    console.log(error);
-  }
-}
-
-connectDbAndStartServer(PORT, dbURI);
+//connect to mongodb
+mongoose
+  .connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((res) => console.log("Connected to Mongodb..."));
 
 //middleware
 app.use(express.urlencoded({ extended: true })); //enable POST req from forms
