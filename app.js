@@ -24,7 +24,8 @@ app.use(express.static("public")); //make the folder public, which meens it can 
 app.use(blogRouter);
 
 app.get("/*", (req, res) => {
-  res.sendFile("./templates/index.html", { root: __dirname });
+  res.sendFile("./views/index.html", { root: __dirname });
 });
 
+module.exports = app;
 //Representational state transfer
