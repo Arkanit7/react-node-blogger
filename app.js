@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || "3000"; //80 is web default
 const dbURI =
+  process.env.MONGODB_URI ||
   "mongodb+srv://freeuser:12345@cluster0.jhjbg.mongodb.net/my_node_db?retryWrites=true&w=majority";
 
 async function connectDbAndStartServer(PORT = 3000, dbURI) {
